@@ -11,12 +11,7 @@ class Scraper
   end
     
   def get_courses
-    courses = []
-    get_page.css("section.posts-holder article").each do |course|
-      course.css("h2").each do |course_title|
-        course_title.text
-      end
-    end
+    self.get_page.css(".post")
   end
   
   def make_courses
